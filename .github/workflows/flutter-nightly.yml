@@ -1,12 +1,14 @@
 name: Flutter Nightly Build
 
 on:
-  schedule:
-    # schedule build every night
-    - cron: "0 0 * * *"
+  # Nightly schedule disabled: nightly releases stole the "Latest" badge
+  # from version releases in the repo sidebar. Run manually if needed.
+  # schedule:
+  #   # schedule build every night
+  #   - cron: "0 0 * * *"
   workflow_dispatch:
 
-# Same reason as puzzlenetdesk-release.yml: the repo default token is
+# Same reason as puzzledesk-release.yml: the repo default token is
 # contents: read, but the called flutter-build.yml jobs need contents: write.
 permissions:
   contents: write
